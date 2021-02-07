@@ -1,0 +1,7 @@
+---
+- name: Apache web playbook
+  hosts: web
+  become: yes
+  become_method: sudo
+  roles:
+    - git

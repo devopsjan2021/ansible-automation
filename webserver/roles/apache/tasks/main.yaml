@@ -1,0 +1,21 @@
+---
+- name: install Apache
+  yum:
+    name: httpd
+    state: present
+
+- name: Copy file with owner and permissions
+  copy:
+    src: index.html
+    dest: /var/www/html/index.html
+    remote_src: no
+    owner: root
+    group: root
+    mode: '0644'
+  notify: restart apache
+
+- name: Start service httpd, if not started and also enable
+  service:
+    name: httpd
+    state: started
+    enabled: yes

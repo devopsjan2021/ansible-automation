@@ -1,0 +1,123 @@
+[ec2-user@ip-172-31-95-158 webserver]$ history
+    1  sudo yum install ansible
+    2  sudo amazon-linux-extras install ansible2
+    3  python -V
+    4  python3 -V
+    5  sudo yum install python3
+    6  sudo pip3 install ansible
+    7  ansible -version
+    8  ansible --version
+    9  ssh-keygen
+   10  ls -ltr /home/ec2-user/.ssh/
+   11  cat /home/ec2-user/.ssh/id_rsa.pub 
+   12  ssh ec2-user@52.87.213.198
+   13  ssh ec2-user@52.87.213.198 -vvv
+   14  ansible --version
+   15  pwd
+   16  vi inv
+   17  ls -ltr
+   18  ansible -i inv -m ping
+   19  ansible -m ping
+   20  ansible -i inv -m ping
+   21  cat inv 
+   22  ansible 52.87.213.198 -m ping
+   23  ansible localhost -m ping
+   24  ansible -i inv -m ping all
+   25  cat inv 
+   26  ansible -i inv -p 22 -m ping all
+   27  vi inv 
+   28  ansible -i inv -p 22 -m ping all
+   29  ansible -i inv -m ping all
+   30  vi inv 
+   31  cat inv 
+   32  vi ~/.ssh/golden.pem
+   33  chmod 400 ~/.ssh/golden.pem
+   34  ls -ltr ~/.ssh/
+   35  vi inv 
+   36  ansible -i inv -m ping all
+   37  cat inv 
+   38  vi inv 
+   39  ansible -i inv -m ping all
+   40  ansible -i inv -m ping web
+   41  cat inv 
+   42  ls -ltr
+   43  ansible -i inv -m shell -a "uptime" all
+   44  cat inv 
+   45  vi inv 
+   46  ansible -i inv -m shell -a "uptime" all
+   47  ls -ltr
+   48  mkdir ansible-automation 
+   49  cd ansible-automation/
+   50  ls -ltr
+   51  mkdir webserver-singlefile
+   52  cd webserver-singlefile/
+   53  ls -ltr
+   54  cd ansible-automation/webserver-singlefile/
+   55  ls -ltr
+   56  vi apache.yaml
+   57  cp ~/inv .
+   58  cat inv 
+   59  vi apache.yaml
+   60  ls -ltr
+   61  cat inv 
+   62  vi index.html
+   63  ls -ltr
+   64  ansible-playbook -i inv apache.yaml
+   65  ls -ltr
+   66  vi apache.yaml 
+   67  cd ../
+   68  ls -ltr
+   69  mkdir webserver
+   70  cd webserver
+   71  cp ../webserver-singlefile/inv .
+   72  ls -ltr
+   73  mkdir roles
+   74  mkdir roles/apache
+   75  mkdir roles/apache/tasks
+   76  vi roles/apache/tasks/main.yaml
+   77  cat ../webserver-singlefile/apache.yaml 
+   78  ls -ltr
+   79  vi index.html
+   80  ls -ltr
+   81  vi site.yaml
+   82  ls -ltr
+   83  tree
+   84  sudo yum install tree
+   85  ls -ltr
+   86  tree
+   87  cat site.yaml 
+   88  mkdir roles/git
+   89  mkdir roles/git/tasks
+   90  vi roles/git/tasks/main.yaml
+   91  tree
+   92  cat site.yaml 
+   93  vi site.yaml 
+   94  cat site.yaml 
+   95  ansible-playbook -i inv site.yaml 
+   96  tree
+   97  cat site.yaml 
+   98  cat roles/git/tasks/main.yaml 
+   99  tree
+  100  cp site.yaml app.yaml
+  101  vi app.yaml 
+  102  ls -ltr
+  103  cat app.yaml 
+  104  ls -ltr
+  105  cat site.yaml 
+  106  vi site.yaml 
+  107  ansible-playbook -i inv site.yaml 
+  108  vi site.yaml 
+  109  ansible-playbook -i inv site.yaml 
+  110  vi site.yaml 
+  111  ls -ltr
+  112  vi roles/apache/tasks/main.yaml 
+  113  mkdir roles/apache/handlers
+  114  vi roles/apache/handlers/main.yaml
+  115  vi roles/apache/tasks/main.yaml 
+  116  vi roles/apache/handlers/main.yaml
+  117  vi roles/apache/tasks/main.yaml 
+  118  ansible-playbook -i inv site.yaml 
+  119  vi index.html 
+  120  ansible-playbook -i inv site.yaml 
+  121  tree 
+  122  history
